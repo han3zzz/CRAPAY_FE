@@ -487,7 +487,7 @@ async function login(): Promise<void> {
 
     const address: string = accounts[0]
 
-    const nonceRes = await fetch("http://localhost:3001/nonce", {
+    const nonceRes = await fetch("https://crapay.onrender.com/nonce", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ address })
@@ -502,7 +502,7 @@ async function login(): Promise<void> {
       params: [message, address]
     })
 
-    const verifyRes = await fetch("http://localhost:3001/verify", {
+    const verifyRes = await fetch("https://crapay.onrender.com/verify", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ address, signature })
@@ -840,7 +840,7 @@ async function pay() {
     // ======================
     // 1. CALL BACKEND VALIDATE
     // ======================
-    const validateRes = await fetch("http://localhost:3001/sendtx", {
+    const validateRes = await fetch("https://crapay.onrender.com/sendtx", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
