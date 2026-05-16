@@ -1492,11 +1492,11 @@ const viemAdapter = createWalletClient({
   transport: custom(window.ethereum!)
 });
 async function swapToken() {
-   // Swal.fire({
-   //    title: "Swap is undergoing maintenance.",
-   //    icon: "warning"
-   //  });
-   //  return;
+   Swal.fire({
+      title: "Swap is undergoing maintenance to optimize some features; please try again later.",
+      icon: "warning"
+    });
+    return;
 
   const amount = document.getElementById("fromAmount")?.ariaValueText as string;
   const adapter = await createViemAdapterFromProvider({
