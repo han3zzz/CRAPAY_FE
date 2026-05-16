@@ -223,7 +223,7 @@ function generateQR(): void {
 
     const logo = new Image();
     logo.crossOrigin = "anonymous";
-    logo.src = "./public/logo.png";
+    logo.src = "./logo.png";
 
     logo.onload = function () {
       const size = 31;
